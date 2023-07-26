@@ -40,7 +40,7 @@ void *_realloc(void *ptr, unsigned int prv_size, unsigned int new_size);
 int count_word(char *str);
 int delimiter(char *str, char *deli);
 
-/* Envirenment */
+/* Environment */
 void manage_help(void);
 void print_env(void);
 char *get_envi(const char *name);
@@ -48,6 +48,7 @@ char *rm_new_line(char *str);
 
 void manage_exit(char **usertok, char *l);
 void manage_help(void);
+char **tok_str(char *buf);
 
 /* Freeing */
 void frees_get_env(char *var);

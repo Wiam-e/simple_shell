@@ -35,6 +35,34 @@ void manage_exit(char **usertok, char *l)
 	free(l);
 	exit(EXIT_SUCCESS);
 }
+/**
+ * tok_str - tokenizes a string
+ * @buf: buffer to store the input
+ * Return: pointer to an array of strings
+ */
+
+char **tok_str(char *buf)
+{
+	char **toks = NULL;
+	char *tok = NULL;
+	int i = 0;
+
+	toks = malloc(sizeof(char *) * 1024);
+	if (toks == NULL)
+	{
+		perror("Error");
+		return (NULL);
+	}
+	tok = strtok(buf, " \t\n");
+	while (tok != NULL)
+	{
+		toks[i] = tok;
+		tok = strtok(NULL, " \t\n");
+		i++;
+	}
+	toks[i] = NULL;
+	return (toks);
+}
 
 /**
  * manage_help - Opens the Shell help
