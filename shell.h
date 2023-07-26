@@ -46,7 +46,7 @@ void print_env(void);
 char *get_envi(const char *name);
 char *rm_new_line(char *str);
 
-void manage_exit(char **usertok, char *l);
+void manage_exit(char **usertok);
 void manage_help(void);
 
 /* Freeing */
