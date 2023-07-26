@@ -69,5 +69,4 @@ char *check_cmd(char *cn);
 
 void print_error(char *argv, int count, char *cmd, char *msg);
 char *handle_comment(char *s);
-
 #endif
