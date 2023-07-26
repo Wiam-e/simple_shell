@@ -44,7 +44,7 @@ int execute_builtin(char **usertok, char *line)
 			switch (i)
 			{
 			case 0:
-				manage_exit(usertok, line);
+			  manage_exit(usertok, line);
 				break;
 			case 1:
 				chdir(usertok[1]);
