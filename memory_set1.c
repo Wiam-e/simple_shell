@@ -27,14 +27,14 @@ char *_memset(char *s, char b, unsigned int n)
  */
 void free_mem(char **mem)
 {
-    int i = 0;
+	int i = 0;
 
-    while (mem[i] != NULL)
-    {
-        free(mem[i]);
-        i++;
-    }
-    free(mem);
+	while (mem[i] != NULL)
+	{
+		free(mem[i]);
+		i++;
+	}
+	free(mem);
 }
 
 /**
